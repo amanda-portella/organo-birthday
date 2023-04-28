@@ -1,0 +1,17 @@
+.selectField label {
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.selectField select {
+  background-color: var(--white-color);
+  box-sizing: border-box;
+  padding: 18px;
+  width: 100%;
+  font-size: 18px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  border: none;
+  cursor: pointer;
+}
