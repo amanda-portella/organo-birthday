@@ -1,11 +1,14 @@
 import './CardGuest.css';
 
-const CardGuest = ({name, age, primaryColor}) => {
+const CardGuest = ({name, age, id, primaryColor, removeGuest}) => {
 
   const headerColor = {backgroundColor: primaryColor}
 
   return (
     <div className='cardGuest'>
+      <button onClick={() => removeGuest(id)}>
+        X
+      </button>
       <div className='cardHeader' style={headerColor}>
         <img src="/images/profile.png" alt='Representação de uma pessoa'/>
       </div>

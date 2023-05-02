@@ -18,3 +18,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.buttonRemove {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 32px;
+}

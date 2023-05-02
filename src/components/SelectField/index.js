@@ -5,7 +5,7 @@ const SelectField = (props) => {
     <div className='selectField'>
       <label>{props.label}</label>
       <select required={props.required} value={props.value} onChange={(event) => props.onChange(event.target.value)}>
-        {props.itens.map(item => <option key={item.id}>{item.grupo}</option>)}
+        {props.itens.map(item => <option key={item.id} value={item.id}>{item.grupo}</option>)}
       </select>
     </div>
   )

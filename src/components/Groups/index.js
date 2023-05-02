@@ -15,7 +15,9 @@ const Groups = (props) => {
           key={guest.name}
           name={guest.name} 
           age={guest.age} 
+          id={guest.id}
           primaryColor={props.primaryColor}
+          removeGuest={props.removeGuest}
         />)}
       </div>
     </section>

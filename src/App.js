@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import "./index.css";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
 import Groups from "./components/Groups";
 import Footer from "./components/Footer";
 import GuestQuantity from "./components/GuestQuantity";
+import Button from "./components/Button";
 
 function App() {
 
@@ -13,10 +15,35 @@ function App() {
     {id: 1, group: "Aniversariante", primaryColor: "#00C1D4", secondaryColor: "#CCF0F3"},
     {id: 2, group: "Família", primaryColor: "#DC6EBE", secondaryColor: "#F5D3EC"},
     {id: 3, group: "Amigos", primaryColor: "#A6D157", secondaryColor: "#E7F3D1"},
-  ]
+  ];
+
+  useEffect(() => {
+    let aux = localStorage.getItem('guests')
+    let guests = JSON.parse(aux)
+    setGuests(guests)
+  },[])
 
   const onSaveGuest = (guest) => {
-    setGuests([...guests, guest])
+    let id = parseInt(Math.random() * 100 + 1)
+    let item = {id, ...guest}
+    let aux = [...guests, item]
+    setGuests(aux)
+
+    //salvar no localStorage
+    localStorage.setItem('guests', JSON.stringify(aux))
+  };
+
+  const removeList = (event) => {
+    event.preventDefault();
+    setGuests([])
+    localStorage.setItem('guests', JSON.stringify([]))
+  };
+
+  const removeGuest = (id) => {
+    let aux = guests.filter(guest => guest.id !== id)
+    setGuests(aux)
+
+    localStorage.setItem('guests', JSON.stringify(aux))
   }
 
   return (
@@ -29,6 +56,14 @@ function App() {
         onSaveGuest={onSaveGuest}
       />
       <GuestQuantity guests={guests}/>
+      {guests.length > 0 ? 
+        <div className="buttonRemove" onClick={removeList}>
+          <Button>
+            Apagar Lista
+          </Button>
+        </div>
+        : ""
+      }
       {groups.map(group => {
         if(group.id === 0) {
           return false
@@ -38,7 +73,8 @@ function App() {
             group={group.group} 
             primaryColor={group.primaryColor} 
             secondaryColor={group.secondaryColor}
-            guests={guests.filter(guest => guest.group === group.group)}
+            guests={guests.filter(guest => parseInt(guest.group) === group.id)}
+            removeGuest={removeGuest}
           />
         }
       }
