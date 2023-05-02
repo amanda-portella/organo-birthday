@@ -23,26 +23,40 @@ Ao cadastrar um convidado é possível escolher em qual grupo este se encontra, 
  
  A divisão por grupos ajuda a ter uma melhor organização e controle.
  
-Também é apresentado a quantidade de convidados, que foram divididas entre:
-  - ``Maiores de 10 anos`` 
-  - ``Menores de 10 anos``
-  - ``Menores de 3 anos``
-  - ``Total de convidados``
+
+## :confetti_ball: Melhorias Realizadas
+
+Funcionalidades adicionadas ao projeto base
+
+
+  - ``Quantidade de convidados`` 
   
-A divisão de quantidades ajuda a ter o controle de quais convidados serão pagantes integrais, quais meio pagantes e quais isentos. Foi pensado nisso pois a maioria dos buffets de festa possuem regras de pagantes.
+  É apresentado a quantidade de convidados, que foram divididos entre:
+  
+    - Maiores de 10 anos
+    - Menores de 10 anos
+    - Menores de 3 anos
+    - Total de convidados
+  
+  A divisão de quantidades ajuda a ter o controle de quais convidados serão pagantes integrais, quais meio pagantes e quais isentos. Foi pensado nisso pois a maioria dos buffets de festa possuem regras de pagantes.
 
-***OBS:***
- 
-  - A idade para meio pagantes foi fixada entre 4 a 10 anos
-  - Pagantes isentos são menores de 3 anos
-  - Pagantes integrais é de 11 anos para cima
-
-## :warning: Melhorias
-
-A ideia é adicionar mais algumas funcionalidades no projeto, sendo elas:
+    OBS:
+  
+    - A idade para meio pagantes foi fixada entre 4 a 10 anos
+    - Pagantes isentos são menores de 3 anos
+    - Pagantes integrais é de 11 anos para cima
+  
   - ``Exclusão de Convidado``
+  
+    É possível excluir um convidado de forma individual.
+    
   - ``Exclusão total da lista de convidado``
+  
+    É possível excluir toda a lista.
+    
   - ``Salvar no localStorage a lista dos convidados``
+  
+    A lista de convidados fica salva no localStorage, para que caso saia do navegador, os dados ainda estejam salvos.
 
       
 ### :heavy_check_mark:Técnicas e tecnologias usadas
