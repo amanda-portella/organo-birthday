@@ -5,6 +5,12 @@
 
 Esse projeto foi baseado no curso de React Desenvolvendo com Javascript da Alura. 
 
+![Página do projeto](https://i.imgur.com/3B8PnN5.png)
+
+## :confetti_ball: Deploy do projeto
+
+Link: https://organo-birthday.vercel.app/
+
 ## :confetti_ball: Sobre o projeto
 
 É uma proposta para ajudar na listagem de convidados de aniversário. 
