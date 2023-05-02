@@ -20,8 +20,11 @@ function App() {
   useEffect(() => {
     let aux = localStorage.getItem('guests')
     let guests = JSON.parse(aux)
-
-    setGuests(guests)
+    if(aux === null) {
+      setGuests([])
+    } else {
+      setGuests(guests)
+    }
   },[])
 
   const onSaveGuest = (guest) => {
