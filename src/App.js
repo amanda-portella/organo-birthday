@@ -20,6 +20,7 @@ function App() {
   useEffect(() => {
     let aux = localStorage.getItem('guests')
     let guests = JSON.parse(aux)
+
     setGuests(guests)
   },[])
 
@@ -56,7 +57,7 @@ function App() {
         onSaveGuest={onSaveGuest}
       />
       <GuestQuantity guests={guests}/>
-      {Array.isArray(guests) &&  guests.length > 0 ? 
+      {guests.length > 0 ? 
         <div className="buttonRemove" onClick={removeList}>
           <Button>
             Apagar Lista
