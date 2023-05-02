@@ -56,7 +56,7 @@ function App() {
         onSaveGuest={onSaveGuest}
       />
       <GuestQuantity guests={guests}/>
-      {guests.length > 0 ? 
+      {Array.isArray(guests) &&  guests.length > 0 ? 
         <div className="buttonRemove" onClick={removeList}>
           <Button>
             Apagar Lista
