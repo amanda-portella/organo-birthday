@@ -14,11 +14,19 @@
 @media screen and (min-width: 768px) {
   .button {
     margin: 24px 0;
-    padding: 20px;
-    font-size: 18px;
+    padding: 18px;
+    font-size: 16px;
   }
   
   .button:hover {
     color: var(--principal-color);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    margin: 24px 0;
+    padding: 20px;
+    font-size: 18px;
   }
 }

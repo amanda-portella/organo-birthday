@@ -11,12 +11,6 @@
   padding-bottom: 8px;
 }
 
-.groups span {
-  position: relative;
-  right: -30px;
-  font-size: 16px;
-}
-
 .groups .cards {
   display: flex;
   justify-content: space-around;
@@ -25,16 +19,23 @@
 }
 
 @media screen and (min-width: 768px) {
+  
+  .groups h3 {
+    font-size: 30px;
+  }
+  
+  .groups .cards {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .groups {
     padding: 0 32px 32px 32px;
   }
   
   .groups h3 {
     font-size: 32px;
-  }
-  
-  .groups span {
-    font-size: 18px;
   }
   
   .groups .cards {

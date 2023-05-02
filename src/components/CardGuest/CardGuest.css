@@ -39,6 +39,29 @@
 
 @media screen and (min-width: 768px) {
   .cardGuest {
+    width: 220px;
+    margin-bottom: 32px;
+  }
+  
+  
+  .cardGuest .cardHeader img {
+    width: 100px;
+  }
+  
+  .cardGuest .cardText h4 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .cardGuest .cardText h5 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .cardGuest {
     width: 250px;
     margin-bottom: 32px;
   }
@@ -47,16 +70,4 @@
   .cardGuest .cardHeader img {
     width: 110px;
   }
-  
-  .cardGuest .cardText h4 {
-    font-size: 20px;
-    line-height: 22px;
-  }
-  
-  
-  .cardGuest .cardText h5 {
-    font-size: 18px;
-    line-height: 20px;
-  }
-  
 }

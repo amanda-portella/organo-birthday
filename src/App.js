@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Form from "./components/Form";
 import Groups from "./components/Groups";
 import Footer from "./components/Footer";
+import GuestQuantity from "./components/GuestQuantity";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         })}
         onSaveGuest={onSaveGuest}
       />
+      <GuestQuantity guests={guests}/>
       {groups.map(group => {
         if(group.id === 0) {
           return false
