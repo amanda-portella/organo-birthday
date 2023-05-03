@@ -2,6 +2,7 @@
   text-align: center;
   padding: 0 24px 24px 24px;
   color: var(--secondary-color);
+  background-blend-mode: multiply;
 }
 
 .groups h3 {

@@ -2,11 +2,11 @@ import CardGuest from '../CardGuest';
 import './Groups.css';
 
 const Groups = (props) => {
-  const backgroundColor = {backgroundColor: props.secondaryColor}
+  const background = {backgroundColor: props.secondaryColor, backgroundImage: 'url(/images/fundo.png)'}
   const borderColor = {borderColor: props.primaryColor}
 
   return (
-    (props.guests.length > 0) ? <section className='groups' style={backgroundColor}>
+    (props.guests.length > 0) ? <section className='groups' style={background}>
       <div className='groupsHeader'>
         <h3 style={borderColor}>{props.group}</h3>
       </div>
