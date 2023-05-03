@@ -6,6 +6,7 @@ import Groups from "./components/Groups";
 import Footer from "./components/Footer";
 import GuestQuantity from "./components/GuestQuantity";
 import Button from "./components/Button";
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
@@ -28,8 +29,7 @@ function App() {
   },[])
 
   const onSaveGuest = (guest) => {
-    let id = parseInt(Math.random() * 100 + 1)
-    let item = {id, ...guest}
+    let item = {id: uuidv4(), ...guest}
     let aux = [...guests, item]
     setGuests(aux)
 

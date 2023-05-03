@@ -1,6 +1,7 @@
 .cardGuest {
   width: 200px;
   margin-bottom: 25px;
+  position: relative;
 }
 
 .cardGuest .cardHeader {
@@ -37,17 +38,12 @@
   padding: 0 16px;
 }
 
-.cardGuest button {
-  position: relative;
-  background: #FFF;
-  top: 20px;
-  border-radius: 20px;
-  border: none;
-  width: 25px;
-  height: 25px;
-  left: 94px;
+.cardGuest .remove {
+  position: absolute;
+  top: -5px;
+  right: -5px;
   cursor: pointer;
-  color: var(--secondary-color);
+  fill: var(--white-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -70,11 +66,6 @@
     font-size: 18px;
     line-height: 20px;
   }
-  
-  .cardGuest button {
-    top: 20px;
-    left: 104px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -88,13 +79,7 @@
     width: 110px;
   }
 
-  .cardGuest button {
-    top: 20px;
-    left: 116px;
-  }
-
-  .cardGuest button:hover {
-    background: var(--secondary-color);
-    color: #FFF;
+  .cardGuest .remove:hover {
+    fill: var(--secondary-color);
   }
 }

@@ -1,3 +1,4 @@
+import { AiFillCloseCircle } from 'react-icons/ai';
 import './CardGuest.css';
 
 const CardGuest = ({name, age, id, primaryColor, removeGuest}) => {
@@ -6,9 +7,7 @@ const CardGuest = ({name, age, id, primaryColor, removeGuest}) => {
 
   return (
     <div className='cardGuest'>
-      <button onClick={() => removeGuest(id)}>
-        X
-      </button>
+      <AiFillCloseCircle className='remove' size={30} onClick={() => removeGuest(id)}/>
       <div className='cardHeader' style={headerColor}>
         <img src="/images/profile.png" alt='Representação de uma pessoa'/>
       </div>

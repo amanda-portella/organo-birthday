@@ -7,9 +7,7 @@ const Groups = (props) => {
 
   return (
     (props.guests.length > 0) ? <section className='groups' style={background}>
-      <div className='groupsHeader'>
-        <h3 style={borderColor}>{props.group}</h3>
-      </div>
+      <h3 style={borderColor}>{props.group}</h3>
       <div className='cards'>
         {props.guests.map(guest => <CardGuest 
           key={guest.name}
